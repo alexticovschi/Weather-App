@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Weather App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weather-icon.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="logosun">
+            <div class="logorays"></div>
+          </div><strong id="title">Weather App</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="current.html">Current
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="forecast.html">Forecast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://openweathermap.org/" target="blank">Open Weather Map</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<div class="jumbotron">
+		<h2 style="font-size: 40px;" class="text-center">Get Weather Forecast</h2>
+	</div>
+
+  <div class="container">
+    <div class="row" id="">
+      <div class="col-md-12">
+        <h4 style="text-align: center; color: #172338; margin-top: 30px;">Enter City Name and Number of Days</h4>
+        <span id="error"></span>
+      </div>
+      <div class="col-md-12">
+<!--         <div class="form-group">
+          <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name">
+        </div>
+        <div class="input-group">
+          <input type="text" name="days" id="days" class="form-control" placeholder="Days num: Max 16">
+          <span class="input-group-btn">
+            <button class="btn btn-primary"  id="submitForecast" type="submit">Search City</button>
+          </span>
+        </div> -->
+        <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name">
+        <input type="text" name="days" id="days" class="form-control" placeholder="Number of Days: Max 16" style="margin-top: 3px;">
+
+      </div>
+      <button type="submit" id="submitForecast" class="btn btn-primary" style="">Search City</button>
+
+    </div>
+  </div>
+
+
+
+	<div class="container-fluid" id="forecastContainer">
+		<div class="row" id="table">
+      <div id="forecastHead" style="margin-top:30px;"></div>
+
+			<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered text-center">
+        <thead id="thead"></thead>
+				<!-- <thead>
+					<tr>
+						<th scope="col">Icon</th>
+						<th scope="col">Weather</th>
+						<th scope="col">Description</th>
+						<th scope="col">Morning Temp</th>
+						<th scope="col">Night Temp</th>
+						<th scope="col">Min Temp</th>
+						<th scope="col">Max Temp</th>
+						<th scope="col">Pressure</th>
+						<th scope="col">Humidity</th>
+						<th scope="col">Wind Speed</th> -->
+						<!-- <th scope="col">Wind Direction</th> -->
+					<!-- </tr>
+				</thead> -->
+
+				<tbody id="forecastWeather">
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<p>Copyright &copy; Weather App</p>
+  </div>
+
+
+	<!-- jQuery library -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="jquery/jquery.min.js"></script>
+	<script src="popper/popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/forecast.js"></script>
+
+</body>
+</html>
